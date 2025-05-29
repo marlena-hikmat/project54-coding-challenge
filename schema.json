@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "minItems": 5,
+  "maxItems": 5,
+  "items": {
+    "type": "object",
+    "required": ["taskId", "title", "dueDate"],
+    "properties": {
+      "taskId": {
+        "type": "string",
+        "pattern": "^OBJ-\\d{4}-999-T\\d{2}$"
+      },
+      "title": {
+        "type": "string"
+      },
+      "dueDate": {
+        "type": "string",
+        "format": "date"
+      }
+    },
+    "additionalProperties": false
+  }
+}
